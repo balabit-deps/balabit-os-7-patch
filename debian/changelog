@@ -1,3 +1,16 @@
+patch (2.7.6-2ubuntu1.1) bionic-security; urgency=medium
+
+  * SECURITY UPDATE: Directory traversal
+    - debian/patches/CVE-2019-13636.patch: Don't follow symlinks unless
+      --follow-symlinks is given in src/inp.c, src/util.c.
+    - CVE-2019-13636
+  * SECURITY UPDATE: Shell command injection
+    - debian/patches/CVE-2019-13638.patch: Invoke ed directly instead of
+      using the shell in src/pch.c.
+    - CVE-2019-13638
+
+ -- Leonidas S. Barbosa <leo.barbosa@canonical.com>  Tue, 23 Jul 2019 09:12:54 -0300
+
 patch (2.7.6-2ubuntu1) bionic; urgency=medium
 
   * debian/patches/0001-Fix-ed-style-test-failure.patch: fix ed-style test.
